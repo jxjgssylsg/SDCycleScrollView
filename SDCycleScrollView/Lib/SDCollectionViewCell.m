@@ -23,14 +23,12 @@
 #import "SDCollectionViewCell.h"
 #import "UIView+SDExtension.h"
 
-@implementation SDCollectionViewCell
-{
+@implementation SDCollectionViewCell {
     __weak UILabel *_titleLabel;
 }
 
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         UIImageView *imageView = [[UIImageView alloc] init];
         _imageView = imageView;
@@ -48,15 +46,13 @@
     return self;
 }
 
-- (void)setTitle:(NSString *)title
-{
+- (void)setTitle:(NSString *)title {
     _title = [title copy];
     _titleLabel.text = [NSString stringWithFormat:@"   %@", title];
 }
 
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     _imageView.frame = self.bounds;

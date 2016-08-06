@@ -33,7 +33,7 @@ NSString * const ID = @"cycleCell";
 @property (nonatomic, weak) UICollectionView *mainView; // 显示图片的collectionView
 @property (nonatomic, weak) UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, assign) NSInteger totalItemsCount;
+@property (nonatomic, assign) NSInteger totalItemsCount; //
 @property (nonatomic, weak) TAPageControl *pageControl;
 
 @end
@@ -176,6 +176,7 @@ NSString * const ID = @"cycleCell";
     int itemIndex = (scrollView.contentOffset.x + self.mainView.sd_width * 0.5) / self.mainView.sd_width;
     int indexOnPageControl = itemIndex % self.imagesGroup.count;
     _pageControl.currentPage = indexOnPageControl;
+    NSLog(@"hahha");
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
